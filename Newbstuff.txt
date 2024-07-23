@@ -1,0 +1,56 @@
+Postgres Password = NxPostgres1
+
+ PGPASSWORD='NxPostgrsql' psql -h database-1.cmnkfdahsas3.eu-north-1.rds.amazonaws.com -U postgres -d postgres -p 5432
+connection sting for mongo: mongo --host docdb-2024-06-22-00-05-00.cz0qqo02m0na.eu-west-1.docdb.amazonaws.com:27017 --username mongodb --password NxPostgrsql 
+
+db.Orders.find().pretty()
+
+
+Cert Bot Information-
+
+ubuntu@ip-172-31-23-234:~$ sudo certbot certonly --standalone -d restosolutionssaas.com -d www.restosolutionssaas.com
+Saving debug log to /var/log/letsencrypt/letsencrypt.log
+Requesting a certificate for restosolutionssaas.com and www.restosolutionssaas.com
+
+Successfully received certificate.
+Certificate is saved at: /etc/letsencrypt/live/restosolutionssaas.com/fullchain.pem
+Key is saved at:         /etc/letsencrypt/live/restosolutionssaas.com/privkey.pem
+This certificate expires on 2024-05-21.
+These files will be updated when the certificate renews.
+Certbot has set up a scheduled task to automatically renew this certificate in the background.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+If you like Certbot, please consider supporting our work by:
+ * Donating to ISRG / Let's Encrypt:   https://letsencrypt.org/donate
+ * Donating to EFF:                    https://eff.org/donate-le
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+cd /etc/letsencrypt/live/restosolutionssaas.com/
+
+openssl pkcs12 -export -out certificate.pfx -inkey privkey.pem -in fullchain.pem
+
+
+docker push deathbot545/foodorderingweb:latest
+
+docker build -t deathbot545/foodorderingweb:latest -f Food_Ordering_Web\Dockerfile .
+
+sudo docker system prune
+
+
+sudo docker-compose up -d --force-recreate
+
+
+ sudo docker-compose logs -f
+sudo docker-compose pull
+
+Add-Migration First_1 -Context AppDbContext
+
+git add .
+git commit -m "A descriptive message about your changes"
+git push origin master
+
+
+restosolutionssaas
+
+cd /etc/nginx/sites-available
+sudo nano restosolutions.co
